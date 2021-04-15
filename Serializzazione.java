@@ -27,9 +27,9 @@ public class Serializzazione {
      try{
 //    FileOutputStream FO= new FileOutputStream("test.ser");
 //   ObjectOutputStream OS= new  ObjectOutputStream (FO); 
-//   OS.writeObject(9);
-//   OS.writeObject(1.367);
-//   OS.writeObject(false);
+   OS.writeObject(9);
+   OS.writeObject(1);
+   OS.writeObject("ciao");
 //   OS.writeObject("a");
 //   OS.flush();
 //   OS.close();
@@ -40,6 +40,10 @@ public class Serializzazione {
     ObjectInputStream IS= new  ObjectInputStream (FI); 
     int v1= (int) IS.readObject();
      System.out.println(" v1 "+v1);
+         int v2= (int) IS.readObject();
+     System.out.println(" v2 "+v1);
+         String v3= (String) IS.readObject();
+     System.out.println(" v3 "+v3);
    }  catch(FileNotFoundException ex){
        System.out.println("Impossibile trovare il file");
      
